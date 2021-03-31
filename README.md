@@ -37,15 +37,18 @@
 * **Constraints**
   * Mainly identify traffic and data handling constraints at scale.
   * Scale of the system such as requests per second, requests types, data written per second, data read per second
-    * DAU - 1,000 Daily average user
-    * MAU - 30,400 Monthly average user
-    * AAU - 365,000 Annual average user
-    * Guestimation on size of requests to store
+    * DAU - 1,000,000 Daily average user
+    * MAU - 30,000,000 Monthly average user
+    * AAU - 365,000,000 Annual average user
+    * Size guestimations
        * [Sample request](https://pastebin.com/cHZTncv9)
        * 462 bytes per request
-       * DAU * 462 B = 462,000 bytes (0.000462 GB) daily
-       * MAU * 462 B = 1,405,404 bytes (0.001405404 GB) monthly
-       * AAU * 462 B = 16,863,000 bytes (0.016863 GB) annually
+       * Storage estimates
+         * DAU * 462 B = 462,000,000 B (0.462 GB) daily
+         * MAU * 462 B = 13,860,000,000 B (13.86 GB) monthly
+         * AAU * 462 B = 168,630,000,000 B (168.63) annually
+       * Bandwidth estimates
+         * Eg. (462 B * 4260 B) / 86400s = 24.70 MB/s
     * **NOTE: Need to talk bandwidth, throughput and latency**
   * Special system requirements such as multi-threading, read or write oriented.
 #### High level architecture design (abstract design)
