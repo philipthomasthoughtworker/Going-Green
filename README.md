@@ -51,6 +51,8 @@
          * Eg. (462 B * 4260 B) / 86400s = 24.70 MB/s
     * **NOTE: Need to talk bandwidth, throughput and latency**
   * Special system requirements such as multi-threading, read or write oriented.
+    * Read to write ratio
+      * 2:1
 #### High level architecture design (abstract design)
 * **Sketch the important components and connections between them, but don't do into some details.**
   * Application service layer (serves the requests)
